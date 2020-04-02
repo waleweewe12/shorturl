@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <form method="POST" action="/getshorturl">
+        <input type="text" name="link">
+        <button type="submit">Submit</button>
+    </form>
+    <% if (data.shortlink || data.message) {%> 
+        <h1>Your Short link is : <a href="https://<%=data.shortlink || data.message%>"><%=data.shortlink || data.message%></a> </h1>
+    <% } %> 
+</body>
+</html>
